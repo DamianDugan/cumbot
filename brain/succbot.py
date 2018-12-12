@@ -1,4 +1,5 @@
 import random
+import discord
 from discord import Game
 from discord.ext.commands import Bot
 import config
@@ -10,6 +11,7 @@ import pornhub
 BOT_PREFIX = "!"
 
 client = Bot(command_prefix=BOT_PREFIX)
+
 
 @client.command(name='random',
                 description="Returns a random sentence",
@@ -47,7 +49,7 @@ async def on_ready():
 async def porn_search(keyword):
     search_keywords = [keyword]
     pornhub.client = pornhub.PornHub(search_keywords)
-    for video in pornhub.client.getVideos(5, page=1):
+    for video in pornhub.client.getVideos(5, page=100):
         await client.say(str(video["name"] + " " + video["url"]))
 
 client.run(config.SUCCBOTTOKEN)
