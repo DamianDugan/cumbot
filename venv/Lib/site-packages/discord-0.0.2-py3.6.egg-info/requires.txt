@@ -1,0 +1,4 @@
+discord.py
+
+[voice]
+PyNaCl==1.0.1
