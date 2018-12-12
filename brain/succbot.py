@@ -1,11 +1,7 @@
 import random
-import discord
 from discord import Game
 from discord.ext.commands import Bot
 import config
-import requests
-import lxml
-import bs4
 import pornhub
 
 BOT_PREFIX = "!"
