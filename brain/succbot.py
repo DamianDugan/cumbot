@@ -48,4 +48,4 @@ async def porn_search(keyword):
     for video in pornhub.client.getVideos(5, page=100):
         await client.say(str(video["name"] + " " + video["url"]))
 
-client.run(config.SUCCBOTTOKEN)
+client.run(config.OTY4NzE1MzIwODkyMjA3MTA0.Ymi4cg.IrQ9mFvJv-EN2Nxzwg7pfxI7uLo)
